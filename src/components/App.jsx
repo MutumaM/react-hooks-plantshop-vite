@@ -10,9 +10,11 @@ function App() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3000/plants')
+    fetch('http://localhost:6001/plants')
       .then(response => response.json())
-      .then(data => setPlants(data))
+      .then(data =>{ console.log("API DATA:", data);
+      setPlants(data);})
+      .catch(err => console.error("API ERROR:", err));
   }, [])
   return (
     <div className="app">

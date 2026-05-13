@@ -5,10 +5,11 @@ function NewPlantForm({onNewPlantSubmit}) {
   const [image, setImage] = useState('')
   const [price, setPrice] = useState('')
 
+
   function handleSubmit(event){
     event.preventDefault()
 
-    fetch("http://localhost:3000/plants", {
+    fetch("http://localhost:6001/plants", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -37,3 +38,5 @@ function NewPlantForm({onNewPlantSubmit}) {
 }
 
 export default NewPlantForm;
+
+
